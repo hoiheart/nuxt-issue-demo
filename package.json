@@ -1,7 +1,7 @@
 {
   "name": "nuxt-issue-demo",
   "version": "1.0.0",
-  "description": "nuxt perfomance issue demo",
+  "description": "nuxt issue demo (make each branch)",
   "author": "hoiheart",
   "private": true,
   "scripts": {
