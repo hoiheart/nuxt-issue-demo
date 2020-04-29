@@ -28,7 +28,6 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/demo'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -39,6 +38,67 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          {
+            code: 'en',
+            file: 'en.json'
+          },
+          {
+            code: 'ar',
+            file: 'ar.json'
+          },
+          {
+            code: 'ca',
+            file: 'ca.json'
+          },
+          {
+            code: 'de',
+            file: 'de.json'
+          },
+          {
+            code: 'es',
+            file: 'es.json'
+          },
+          {
+            code: 'fa',
+            file: 'fa.json'
+          },
+          {
+            code: 'fi',
+            file: 'fi.json'
+          },
+          {
+            code: 'fr',
+            file: 'fr.json'
+          },
+          {
+            code: 'id',
+            file: 'id.json'
+          },
+          {
+            code: 'it',
+            file: 'it.json'
+          },
+          {
+            code: 'ko',
+            file: 'ko.json'
+          },
+          {
+            code: 'th',
+            file: 'th.json'
+          },
+        ],
+        lazy: true,
+        langDir: 'locales/',
+        defaultLocale: 'en',
+        vueI18n: {
+          fallbackLocale: 'en'
+        }
+      }
+    ]
   ],
   /*
   ** Build configuration
