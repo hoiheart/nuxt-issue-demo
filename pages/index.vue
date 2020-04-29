@@ -3,10 +3,10 @@
     <div>
       <logo />
       <h1 class="title">
-        nuxt-issue-demo
+        hello
       </h1>
       <h2 class="subtitle">
-        nuxt perfomance issue demo
+        nuxt
       </h2>
       <div class="links">
         <a
