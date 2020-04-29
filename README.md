@@ -1,6 +1,6 @@
 # nuxt-issue-demo
 
-> nuxt perfomance issue demo
+> nuxt issue demo (make each branch)
 
 ## Build Setup
 
