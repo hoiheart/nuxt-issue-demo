@@ -32,6 +32,9 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  async fetch ({app}) {
+    console.log(app)
+  },
   components: {
     Logo
   }

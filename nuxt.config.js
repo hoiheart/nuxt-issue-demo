@@ -1,4 +1,3 @@
-
 export default {
   mode: 'universal',
   /*
@@ -38,6 +37,16 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    [
+      'nuxt-i18n',
+      {
+        locales: ['en', 'es', 'fr'],
+        defaultLocale: 'en',
+        vueI18n: {
+          fallbackLocale: 'en'
+        }
+      }
+    ]
   ],
   /*
   ** Build configuration
