@@ -3,14 +3,14 @@
     <div>
       <logo />
       <h1 class="title">
-        hello
+        hi
       </h1>
       <div class="links">
-        <nuxt-link :to="localePath('hi')">
-          hi
+        <nuxt-link :to="localePath('hello')">
+          hello
         </nuxt-link>
-        <!-- <nuxt-link :to="{ name: 'hi' }">
-          hi
+        <!-- <nuxt-link :to="{ name: 'hello' }">
+          hello
         </nuxt-link> -->
       </div>
     </div>
@@ -23,9 +23,6 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
-  },
-  mounted () {
-    console.log(this.$router.options)
   }
 }
 </script>

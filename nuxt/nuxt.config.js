@@ -57,5 +57,14 @@ module.exports = {
     */
     extend (config, ctx) {
     }
+  },
+  router: {
+    extendRoutes (routes, resolve) {
+      routes.map(route => {
+        route.path = `/hello${route.path}`
+        route.chunkName = route.chunkName.replace('pages/', 'pages/hello/')
+      })
+      console.log(routes)
+    }
   }
 }
