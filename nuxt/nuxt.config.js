@@ -59,12 +59,10 @@ module.exports = {
     }
   },
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes (routes) {
       routes.map(route => {
         route.path = `/hello${route.path}`
-        route.chunkName = route.chunkName.replace('pages/', 'pages/hello/')
       })
-      console.log(routes)
     }
   }
 }
