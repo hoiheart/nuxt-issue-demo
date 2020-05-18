@@ -6,7 +6,33 @@ const app = express()
 const config = require('./nuxt/nuxt.config.js')
 config.dev = process.env.NODE_ENV !== 'production'
 config.rootDir = './nuxt'
-config.build.publicPath = '/hello/_nuxt/'
+config.build = {
+  ...config.build,
+  publicPath: '/hello/_nuxt/'
+}
+
+// Modify webpack HMR
+if (config.dev) {
+  config.build = {
+    ...config.build,
+    hotMiddleware: {
+      path: '/hello/__webpack_hmr/client'
+    }
+  }
+  config.hooks = {
+    ...config.hooks,
+    'webpack:config': (webpackConfigs) => {
+      return webpackConfigs.map(option => {
+        if (option.name === 'client') {
+          option.entry.app = option.entry.app.map(item => {
+            return item.replace('path=', 'path=/hello') // &path=/hello/__webpack_hmr/client
+          })
+        }
+        return option
+      })
+    }
+  }
+}
 
 async function start () {
   // Init Nuxt.js

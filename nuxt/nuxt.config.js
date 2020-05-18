@@ -59,6 +59,7 @@ module.exports = {
     }
   },
   router: {
+    // Replace routes path
     extendRoutes (routes) {
       routes.map(route => {
         route.path = `/hello${route.path}`
