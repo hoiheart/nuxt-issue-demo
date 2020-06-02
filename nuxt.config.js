@@ -38,7 +38,39 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    'nuxt-i18n',
+    '@nuxtjs/sitemap'
   ],
+  i18n: {
+    seo: true,
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US' // Will be used as catchall locale by default
+      },
+      {
+        code: 'gb',
+        iso: 'en-GB'
+      },
+      {
+        code: 'tw',
+        iso: 'zh-TW'
+      },
+      {
+        code: 'cn',
+        iso: 'zh-CN'
+      }
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en'
+    }
+  },
+  sitemap: {
+    i18n: {
+      defaultLocale: 'en',
+    }
+  },
   /*
   ** Build configuration
   */
